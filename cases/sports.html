@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>体育赛事案例 - 广州时代篷房有限公司</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* 仅针对 sports.html 的局部样式 */
+    .intro-block {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 32px;
+    }
+    .intro-block h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: var(--brand);
+    }
+    .intro-block p {
+      margin-bottom: 16px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    /* 轮播 */
+    .sports-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      height: 360px;
+      box-shadow: var(--card-shadow);
+    }
+    .sports-carousel .track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+    .sports-carousel img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+    .sports-carousel .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .sports-carousel .arrow.left { left: 12px; }
+    .sports-carousel .arrow.right { right: 12px; }
+
+    .sports-carousel .dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .sports-carousel .dots button {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.6);
+      cursor: pointer;
+    }
+    .sports-carousel .dots button.active { background: var(--brand); }
+  </style>
+</head>
+<body class="sports-page">
+  <!-- NAV -->
+  <header id="siteHeader" class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html">
+        <img src="../images/logo.jpg" alt="广州时代篷房 LOGO">
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <ul class="nav-links">
+          <li><a href="../index.html">首页</a></li>
+          <li class="dropdown" data-menu="products"><a class="dropdown-toggle" href="../products/index.html">产品 ▾</a></li>
+          <li class="dropdown" data-menu="cases"><a class="active dropdown-toggle" href="index.html">案例 ▾</a></li>
+          <li><a href="../stock.html">现货库存</a></li>
+          <li><a href="../library.html">资料库</a></li>
+          <li><a href="../news.html">新闻中心</a></li>
+          <li><a href="../about.html">关于时代</a></li>
+          <li><a href="../contact.html">联系方式</a></li>
+        </ul>
+      </nav>
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="移动菜单">☰</button>
+    </div>
+  </header>
+
+  <!-- 面包屑 -->
+  <section class="breadcrumb container">
+    <a href="../index.html">首页</a> &gt; 
+    <a href="index.html">案例展示</a> &gt; 
+    <span>体育赛事案例</span>
+  </section>
+
+  <!-- MAIN -->
+  <main class="container section cases-page">
+    <h1 class="section-title">体育赛事案例</h1>
+    <div class="cases-layout">
+
+      <!-- 左侧目录 -->
+      <aside class="cases-sidebar">
+        <h3>案例分类</h3>
+        <ul class="sidebar-tree">
+      
+          <!-- 体育赛事（当前分类，高亮，展开） -->
+          <li class="open">
+            <a class="sidebar-link" href="/cases/sports.html">体育赛事</a>
+            <button class="toggle-btn">▾</button>
+            <ul class="sub-list">
+              <li><a href="/cases/sports/asian2023.html">2023 杭州亚运会</a></li>
+              <li><a href="/cases/sports/nanjing2025.html">2025 南京世界田联室内锦标赛</a></li>
+              <li><a href="/cases/sports/wuhan2019.html">2019 武汉军人运动会</a></li>
+              <li><a href="/cases/sports/shanxi2021.html">2021 陕西全运会</a></li>
+              <li><a href="/cases/sports/national2025.html">2025 第15届全国运动会</a></li>
+              <li><a href="/cases/sports/chengdu2025.html">2025 成都世运会</a></li>
+            </ul>
+          </li>
+      
+          <!-- 体育场馆 -->
+          <li>
+            <a class="sidebar-link" href="/cases/gym.html">体育场馆</a>
+            <button class="toggle-btn">▾</button>
+            <ul class="sub-list">
+              <li><a href="/cases/gyms/guangzhou.html">广州中学</a></li>
+              <li><a href="/cases/gyms/wuhan.html">武汉光谷体育馆</a></li>
+              <li><a href="/cases/gyms/meiyi.html">梅艺中学篮球馆</a></li>
+              <li><a href="/cases/gyms/huizhou.html">惠州现代职业学校</a></li>
+              <li><a href="/cases/gyms/dongguan.html">东莞厦岗体育公园</a></li>
+              <li><a href="/cases/gyms/huaqiao.html">武汉华侨城极空间</a></li>
+            </ul>
+          </li>
+      
+          <!-- 酒店文旅 -->
+          <li>
+            <a class="sidebar-link" href="/cases/culture.html">酒店文旅</a>
+            <button class="toggle-btn">▾</button>
+            <ul class="sub-list">
+              <li><a href="/cases/culture/zhanglamo.html">张家界案例</a></li>
+              <li><a href="/cases/culture/xinyang.html">信阳案例</a></li>
+              <li><a href="/cases/culture/gannan.html">甘南案例</a></li>
+              <li><a href="/cases/culture/dali.html">大理案例</a></li>
+              <li><a href="/cases/culture/abroad.html">国外案例</a></li>
+            </ul>
+          </li>
+      
+          <!-- 工业仓储 -->
+          <li>
+            <a class="sidebar-link" href="/cases/industry.html">工业仓储</a>
+            <button class="toggle-btn">▾</button>
+            <ul class="sub-list">
+              <li><a href="/cases/industry/gaoming.html">高明仓储</a></li>
+              <li><a href="/cases/industry/hefei.html">合肥仓储</a></li>
+              <li><a href="/cases/industry/peers.html">深圳雄展</a></li>
+              <li><a href="/cases/industry/yunfu.html">云浮仓储</a></li>
+            </ul>
+          </li>
+      
+          <!-- 展览活动 -->
+          <li>
+            <a class="sidebar-link" href="/cases/exhibition.html">展览活动</a>
+            <button class="toggle-btn">▾</button>
+            <ul class="sub-list">
+              <li><a href="/cases/exhibition/hk.html">香港美多节</a></li>
+              <li><a href="/cases/exhibition/scania.html">斯堪尼亚下线活动</a></li>
+              <li><a href="/cases/exhibition/forbidden.html">故宫百花活动</a></li>
+              <li><a href="/cases/exhibition/tiananmen.html">天安门广场案例</a></li>
+              <li><a href="/cases/exhibition/shenzhen.html">深圳案例</a></li>
+              <li><a href="/cases/exhibition/dongguan.html">东莞案例</a></li>
+              <li><a href="/cases/exhibition/supai.html">速派案例</a></li>
+              <li><a href="/cases/exhibition/zhuhai.html">珠海案例</a></li>
+              <li><a href="/cases/exhibition/abroad.html">国外案例</a></li>
+            </ul>
+          </li>
+      
+        </ul>
+      </aside>
+
+      <!-- 右侧内容 -->
+      <section class="cases-content">
+
+        <!-- 总体介绍 -->
+        <div class="intro-block">
+          <h2>体育赛事整体解决方案</h2>
+          <p>
+            我们为各类体育赛事提供完整的篷房与临时设施建设，包括观众区、赛事运营区、媒体中心、休息接待区等，确保赛事顺利高效进行。
+          </p>
+          <a href="../contact.html" class="btn btn-primary">联系我们</a>
+        </div>
+
+        <!-- 图片轮播 -->
+        <div class="sports-carousel" id="sportsCarousel">
+          <div class="track">
+            <img src="../images/banner_test.jpg" alt="体育赛事图1">
+            <img src="../images/banner_test.jpg" alt="体育赛事图2">
+            <img src="../images/banner_test.jpg" alt="体育赛事图3">
+            <img src="../images/banner_test.jpg" alt="体育赛事图4">
+            <img src="../images/banner_test.jpg" alt="体育赛事图5">
+          </div>
+          <button class="arrow left">‹</button>
+          <button class="arrow right">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <!-- 案例卡片 -->
+        <div class="cases-grid">
+          <article class="case-card" style="background-image:url('../images/case-sports.jpg');">
+            <div class="case-overlay">
+              <h3>杭州亚运会 2023</h3>
+              <p>大型国际赛事临时场馆与后勤保障篷房建设。</p>
+              <a class="btn btn-light" href="sports/asian2023.html">了解更多</a>
+            </div>
+          </article>
+
+          <article class="case-card" style="background-image:url('../images/case-sports.jpg');">
+            <div class="case-overlay">
+              <h3>成都世界运动会 2025</h3>
+              <p>场馆扩建与临时功能区篷房搭建。</p>
+              <a class="btn btn-light" href="sports/chengdu2025.html">了解更多</a>
+            </div>
+          </article>
+
+          <article class="case-card" style="background-image:url('../images/case-sports.jpg');">
+            <div class="case-overlay">
+              <h3>南京青奥会 2025</h3>
+              <p>青奥赛事临时接待与展示空间解决方案。</p>
+              <a class="btn btn-light" href="sports/nanjing2025.html">了解更多</a>
+            </div>
+          </article>
+
+          <article class="case-card" style="background-image:url('../images/case-sports.jpg');">
+            <div class="case-overlay">
+              <h3>全国运动会 2025</h3>
+              <p>全国综合性运动会赛事支持与场馆临建。</p>
+              <a class="btn btn-light" href="sports/national2025.html">了解更多</a>
+            </div>
+          </article>
+
+          <article class="case-card" style="background-image:url('../images/case-sports.jpg');">
+            <div class="case-overlay">
+              <h3>陕西全运会 2021</h3>
+              <p>全运会赛事后勤与功能区篷房建设。</p>
+              <a class="btn btn-light" href="sports/shanxi2021.html">了解更多</a>
+            </div>
+          </article>
+
+          <article class="case-card" style="background-image:url('../images/case-sports.jpg');">
+            <div class="case-overlay">
+              <h3>武汉军运会 2019</h3>
+              <p>军运会大型赛事临时指挥与接待中心建设。</p>
+              <a class="btn btn-light" href="sports/wuhan2019.html">了解更多</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- 公司信息 -->
+    <div class="footer-info">
+      <img src="../images/logo.jpg" alt="LOGO" class="footer-logo">
+      <p>
+        广州时代篷房有限公司 (Guangzhou Times Tent Co., Ltd.)<br>
+        地址：广州市荔湾区珠江钢琴创梦园<br>
+        电话：+86 20 6265 1300<br>
+        邮箱：Winnk@timestent.com
+      </p>
+    </div>
+
+    <!-- 联系我们 -->
+    <div class="footer-form">
+      <h3>快捷联系我们</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="您的姓名" name="name" required>
+        <input type="email" placeholder="您的邮箱" name="email" required>
+        <textarea placeholder="留言内容" name="message"></textarea>
+        <button class="btn btn-primary" type="submit">提交</button>
+      </form>
+    </div>
+
+    <!-- 站点地图 -->
+    <div class="footer-sitemap">
+      <div class="map-column">
+        <h4>案例</h4>
+        <ul>
+          <li><a href="sports.html">体育赛事</a></li>
+          <li><a href="gym.html">体育场馆</a></li>
+          <li><a href="culture.html">酒店文旅</a></li>
+          <li><a href="industry.html">工业仓储</a></li>
+          <li><a href="exhibition.html">展览活动</a></li>
+        </ul>
+      </div>
+      <div class="map-column">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="../products/renzi.html">人字形篷房</a></li>
+          <li><a href="../products/hu.html">弧形篷房</a></li>
+          <li><a href="../products/wanqu.html">弯柱篷房</a></li>
+          <li><a href="../products/zhuiding.html">锥顶篷房</a></li>
+          <li><a href="../products/shuangceng.html">双层篷房</a></li>
+        </ul>
+      </div>
+      <div class="map-column">
+        <h4>其他</h4>
+        <ul>
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../stock.html">现货库存</a></li>
+          <li><a href="../library.html">资料库</a></li>
+          <li><a href="../news.html">新闻中心</a></li>
+          <li><a href="../about.html">关于时代</a></li>
+          <li><a href="../contact.html">联系方式</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-bottom">© 2025 广州时代篷房有限公司 版权所有</p>
+</footer>
+
+  <!-- 悬浮工具 -->
+  <div class="contact-bubbles">
+    <div class="bubble" data-text="+86 20 6265 1300">📞</div>
+    <div class="bubble" data-text="Winnk@timestent.com">✉️</div>
+    <div class="bubble" data-text="广州市荔湾区珠江钢琴创梦园">📍</div>
+  </div>
+  <button id="backToTop" aria-label="回到顶部">↑</button>
+
+  <!-- JS -->
+  <script src="../js/script.js"></script>
+  <script>
+    // 轮播逻辑
+    const carousel = document.querySelector("#sportsCarousel");
+    const track = carousel.querySelector(".track");
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector(".arrow.left");
+    const nextBtn = carousel.querySelector(".arrow.right");
+    const dotsContainer = carousel.querySelector(".dots");
+
+    let index = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+      dot.addEventListener("click", () => goTo(i));
+    });
+
+    function update() {
+      track.style.transform = `translateX(${-index * 100}%)`;
+      dotsContainer.querySelectorAll("button").forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      update();
+    }
+    prevBtn.addEventListener("click", () => goTo(index - 1));
+    nextBtn.addEventListener("click", () => goTo(index + 1));
+
+    // 自动播放
+    setInterval(() => goTo(index + 1), 5000);
+  </script>
+</body>
+</html>
